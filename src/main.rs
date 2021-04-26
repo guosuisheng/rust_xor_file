@@ -3,32 +3,6 @@ use std::env;
 
 
 fn main() {
- let mut list_of_numbers =  vec![1, 2, 3,0x98,0x66];
- list_of_numbers.push(0xff);
- let list_of_strings: Vec<String> = list_of_numbers
-    .iter()
-    .map(|i|{
-      let j:i32=i ^ 0xf;
-      println!("int : {} xor oxf {}",i,j);
-      j.to_string()+" Output" 
-    } )
-    .collect();
-    println!("{:?}", list_of_strings);
-    println!("Hello, world!");
-
-     let x = String::from("hello");
-     let _y = &x;
-     let z = &x;
-     let closure = || {
-       println!("{:?}", z);
-       println!("{:?} waht", z);  
-         
-     };
-     let y2 = &x;
-     println!("{:?}", y2);
-     closure();
-     zyguo::onetoone::one();
-
      let mut n:u8=0xf;
      //let mut s: &String;
      let args: Vec<String> = env::args().collect();
